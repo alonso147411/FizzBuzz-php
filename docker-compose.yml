@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  php:
+    build: .
+    volumes:
+      - .:/app
+    working_dir: /app   # Ruta absoluta en el contenedor
+    command: vendor/bin/phpunit
